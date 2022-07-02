@@ -1,0 +1,41 @@
+============================================== Python Functions =========================
+#strip vowels form a string
+>>> table = str.maketrans(dict.fromkeys('aeiouAEIOU'))
+>>> "Hey look words".translate(table)
+'Hy lk wrds'
+---------------------------------------------------------------------------------------
+#what I did
+# for some reason for v in string_.casefold(): would not work with only lower vowels in array, maybe because they were already lower?
+def disemvowel(string_):
+    vowels = ( "a", "e", "i", "o", "u", "A", "E", "I", "O", "U")
+    for v in string_:
+        if v in vowels:
+            string_ = string_.replace(v , "" )
+    return string_
+---------------------------------------------------------------------------------------
+#another 1 line
+def disemvowel(string):
+    return "".join(c for c in string if c.lower() not in "aeiou")
+---------------------------------------------------------------------------------------
+# easy return min and max of array
+def min_max(lst):
+  return [ min(lst), max(lst) ]
+  -------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
