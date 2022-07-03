@@ -21,10 +21,58 @@ def disemvowel(string):
 def min_max(lst):
   return [ min(lst), max(lst) ]
   -------------------------------------------------------------------------------------
+# add numbers of a range
+def get_sum(a,b):
+    return sum(range(min(a, b), max(a, b) + 1))
 
+# Beginner Sum of Numbers by Dr. Professor, Esq.
+# 
+# input:     any two numbers, positive or negative, as a and b
+# output:    print the sum all numbers between a and b; including a and b
+#
+# pseudo-code:
+# test for equality
+#    if equal print a
+#
+# if a greater than b
+#    loop through the value of each number between b and a
+#    accumulate each value in x
+#
+# if b greater than a
+#    loop through the value of each number between a and b
+#    accumulate each value in x
+#
+# return x
 
+def get_sum(a,b):
+    x=0                           
+    if a == b:                    
+        return a                  
+    
+    elif a > b:                   
+        for i in range(b, a+1):
+            x+=i
+    elif b > a:
+        for i in range(a, b+1):
+            x+=i
+    return x
+--------------------------------------------------------------------------------------
+# return the center of a string
+# self done
 
-
+def get_middle(s):
+    num = 0
+    if len(s) % 2 == 0:
+        num = len(s)
+        mid = num / 2
+        midi = int(mid)
+        midn = midi - 1
+        return s[midn:midi+1]
+    else:
+        num = len(s)
+        mid = num / 2
+        return s[int(mid)]
+    
 
 
 
