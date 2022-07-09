@@ -61,7 +61,7 @@ def get_sum(a,b):
 # self done
 
 def get_middle(s):
-    num = 0
+	num = 0
     if len(s) % 2 == 0:
         num = len(s)
         mid = num / 2
@@ -78,25 +78,19 @@ def get_middle(s):
    return s[(len(s)-1)/2:len(s)/2+1]
    
  --------------------------------------------------------------------------------------
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+def set_alarm(employed, vacation):
+	if vacation == True:
+        return False
+    elif (employed == False) & (vacation == False):
+        return False
+    else:
+        return True
+''' 
+The function should return true if you are employed and not on vacation 
+(because these are the circumstances under which you need to set an alarm).
+It should return false otherwise. 
+'''	
+-----------------------------------------------------------------------------------------		
 
 
 
